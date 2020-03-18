@@ -12,11 +12,12 @@ git clone <bitbucketUrl>
 composer install
 cp .env.example .env
 php artisan key:generate
+git flow init
 ```
 
 - change `APP_URL` to laragon url (ex: http://pos-demo.medandev)
 ```
-semua elementtemplate:
+download html template:
 ----------------------
 https://drive.google.com/open?id=18Ndu8hs4sOZX9lcQIhqITOqupSJkg4H7 
 ```

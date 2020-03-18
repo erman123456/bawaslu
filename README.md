@@ -15,6 +15,11 @@ php artisan key:generate
 ```
 
 - change `APP_URL` to laragon url (ex: http://pos-demo.medandev)
+```
+semua elementtemplate:
+----------------------
+https://drive.google.com/open?id=18Ndu8hs4sOZX9lcQIhqITOqupSJkg4H7 
+```
 
 ## About Laravel
 

@@ -47,8 +47,7 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu" class="slimscroll-menu">
             <ul class="metismenu" id="menu-bar">
-                <li class="menu-title">Navigation</li>
-
+                
                 <li>
                     <a href="{{route('dashboard.index')}}">
                         <i data-feather="home"></i>
@@ -56,6 +55,68 @@
                         <span> Dashboard </span>
                     </a>
                 </li>
+                <li class="menu-title">MENU UTAMA</li>
+                <li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="briefcase"></i>
+                        <span> Master Data</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="email-inbox.html">Satuan</a></li>
+                        <li><a href="email-inbox.html">Jenis</a></li>
+                        <li><a href="email-inbox.html">Merek</a></li>
+                        <li><a href="email-inbox.html">Gudang</a></li>
+                        <li><a href="email-inbox.html">Pemasok</a></li>
+                        <li><a href="email-inbox.html">Daftar Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="archive"></i>
+                        <span> Persediaan</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="email-inbox.html">Saldo Awal Item</a></li>
+                        <li><a href="email-inbox.html">Stok Opname</a></li>
+                        <li><a href="email-inbox.html">Daftar Item Masuk</a></li>
+                        <li><a href="email-inbox.html">Daftar Item Keluar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="shopping-bag"></i>
+                        <span> Pembelian</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="email-inbox.html">Pesanan Pembelian / PO</a></li>
+                        <li><a href="email-inbox.html">Pembelian</a></li>
+                        <li><a href="email-inbox.html">Retur Pembelian</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="shopping-bag"></i>
+                        <span> Penjualan</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="email-inbox.html">Pesanan Penjualan / SO</a></li>
+                        <li><a href="email-inbox.html">Penjualan</a></li>
+                        <li><a href="email-inbox.html">Retur Penjualan</a></li>
+                    </ul>
+                </li>
+                <li class="menu-title">FASILITAS</li>
+                <li>
+                    <a href="#">
+                        <i data-feather="grid"></i>
+                        <span class="badge badge-success float-right">1</span>
+                        <span> Barcode </span>
+                    </a>
+                </li>
+
             </ul>
         </div>
         <!-- End Sidebar -->

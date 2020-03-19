@@ -98,7 +98,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);">
-                        <i data-feather="shopping-bag"></i>
+                        <i data-feather="shopping-cart"></i>
                         <span> Penjualan</span>
                         <span class="menu-arrow"></span>
                     </a>

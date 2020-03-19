@@ -2,7 +2,7 @@
 
 - Follow [Laravel Requirement](https://laravel.com/docs/7.x#server-requirements)
 - [Composer](https://getcomposer.org/)
-- Postgres >= 11.0
+- Postgres >= 12.0 (https://www.enterprisedb.com/download-postgresql-binaries)
 - PHP >= 7.2
 
 ## Installation
@@ -16,11 +16,8 @@ git flow init
 ```
 
 - change `APP_URL` to laragon url (ex: http://pos-demo.medandev)
-```
-download html template:
-----------------------
-https://drive.google.com/open?id=18Ndu8hs4sOZX9lcQIhqITOqupSJkg4H7 
-```
+- download html template for see all component (https://drive.google.com/open?id=18Ndu8hs4sOZX9lcQIhqITOqupSJkg4H7)
+
 
 ## About Laravel
 

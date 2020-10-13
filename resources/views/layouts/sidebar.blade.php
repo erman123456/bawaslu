@@ -47,7 +47,7 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu" class="slimscroll-menu">
             <ul class="metismenu" id="menu-bar">
-                
+
                 <li>
                     <a href="{{route('dashboard.index')}}">
                         <i data-feather="home"></i>
@@ -63,9 +63,9 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="email-inbox.html">Satuan</a></li>
-                        <li><a href="email-inbox.html">Jenis</a></li>
-                        <li><a href="email-inbox.html">Merek</a></li>
+                        <li><a href="{{route('unit.index')}}">Satuan</a></li>
+                        <li><a href="{{route('students.index')}}">Students</a></li>
+                        <li><a href="{{route('mahasiswa.index')}}">Mahasiswa</a></li>
                         <li><a href="email-inbox.html">Gudang</a></li>
                         <li><a href="email-inbox.html">Pemasok</a></li>
                         <li><a href="email-inbox.html">Daftar Item</a></li>

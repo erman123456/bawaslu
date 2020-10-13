@@ -1,285 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>MedanDev - @yield('title')</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" src="{{asset('template/img/favicon.png')}}">
 
-        <!-- App css -->
-        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('css/app.min.css')}}" rel="stylesheet" type="text/css" />
+  <title>Badan Pengawas Pemilu Provinsi Sumatera utara / {{$pageTitle}}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/logo.jpg')}}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('template/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('template/css/bootstrap-reset.css')}}" rel="stylesheet">
+    <!--external css-->
+    <link href="{{asset('template/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
 
-    </head>
+    <!--right slidebar-->
+    <link href="{{asset('template/css/slidebars.css')}}" rel="stylesheet">
 
-    <body class="left-side-menu-dark">
+    <!-- Custom styles for this template -->
+    <link href="{{asset('template/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('template/css/style-responsive.css')}}" rel="stylesheet" />
 
-        <!-- Begin page -->
-        <div id="wrapper">
+    <!-- Select2-->
+    <link href="{{asset('template/assets/select2/css/select2.css')}}" rel="stylesheet" />
+    <link href="{{asset('template/assets/select2/css/select2.min.css')}}" rel="stylesheet" />
 
-            <!-- Topbar Start -->
-            <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
-                <div class="container-fluid">
-                    <!-- LOGO -->
-                    <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo">
-                        <span class="logo-lg">
-                            <img src="{{asset('images/logo.png')}}" alt="" height="24" />
-                            <span class="d-inline h5 ml-1 text-logo">Shreyu</span>
-                        </span>
-                        <span class="logo-sm">
-                            <img src="{{asset('images/logo.png')}}" alt="" height="24">
-                        </span>
-                    </a>
+    <!-- Datatable-->
+    <link href="{{asset('template/assets/datatable/dataTables.bootstrap4.min.css')}}"  />
+    <link href="{{asset('template/assets/datatable/buttons.bootstrap4.min.css')}}" />
+    <!--dynamic table-->
+    <link rel="stylesheet" href="{{asset('template/assets/data-tables/DT_bootstrap.css')}}" />
 
-                    <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
-                        <li class="">
-                            <button class="button-menu-mobile open-left disable-btn">
-                                <i data-feather="menu" class="menu-icon"></i>
-                                <i data-feather="x" class="close-icon"></i>
-                            </button>
-                        </li>
-                    </ul>
+    <script src="{{asset('template/js/jquery.js')}}"></script>
+    
+    {{-- DatePicker --}}
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-fileupload/bootstrap-fileupload.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-datepicker/css/datepicker.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-timepicker/compiled/timepicker.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-colorpicker/css/colorpicker.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-daterangepicker/daterangepicker-bs3.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-datetimepicker/css/datetimepicker.css')}}" />
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/jquery-multi-select/css/multi-select.css')}}" />
 
-                    <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
-                        <li class="d-none d-sm-block">
-                            <div class="app-search">
-                                <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search...">
-                                        <span data-feather="search"></span>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
+    <!--bootstrap switcher-->
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css')}}" />
 
-                        {{-- <li class="dropdown d-none d-lg-block" data-toggle="tooltip" data-placement="left" title="Change language"> --}}
-                        <li class="dropdown" data-toggle="tooltip" data-placement="left" title="Change language">
-                            <a class="nav-link dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="false" aria-expanded="false">
-                                <i data-feather="globe"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('images/flags/germany.jpg')}}" alt="user-image" class="mr-2" height="12"> <span
-                                        class="align-middle">German</span>
-                                </a>
+    <!-- switchery-->
+    <link rel="stylesheet" type="text/css"  href="{{asset('template/assets/switchery/switchery.css')}}" />
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('images/flags/italy.jpg')}}" alt="user-image" class="mr-2" height="12"> <span
-                                        class="align-middle">Italian</span>
-                                </a>
+    <!--right slidebar-->
+    <link  href="{{asset('template/css/slidebars.css')}}" rel="stylesheet">
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('images/flags/spain.jpg')}}" alt="user-image" class="mr-2" height="12"> <span
-                                        class="align-middle">Spanish</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('images/flags/russia.jpg')}}" alt="user-image" class="mr-2" height="12"> <span
-                                        class="align-middle">Russian</span>
-                                </a>
-                            </div>
-                        </li>
+    <!--  summernote -->
+    <link  href="{{asset('template/assets/summernote/dist/summernote.css')}}" rel="stylesheet">
 
 
-                        <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left"
-                            title="8 new unread notifications">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
-                                aria-expanded="false">
-                                <i data-feather="bell"></i>
-                                <span class="noti-icon-badge"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-lg">
 
-                                <!-- item-->
-                                <div class="dropdown-item noti-title border-bottom">
-                                    <h5 class="m-0 font-size-16">
-                                        <span class="float-right">
-                                            <a href="" class="text-dark">
-                                                <small>Clear All</small>
-                                            </a>
-                                        </span>Notification
-                                    </h5>
-                                </div>
+  </head>
+  <body>
 
-                                <div class="slimscroll noti-scroll">
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon bg-primary"><i class="uil uil-user-plus"></i></div>
-                                        <p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon">
-                                            <img src="{{asset('images/users/avatar-1.jpg')}}" class="img-fluid rounded-circle" alt="" />
-                                        </div>
-                                        <p class="notify-details">Karen Robinson</p>
-                                        <p class="text-muted mb-0 user-msg">
-                                            <small>Wow ! this admin looks good and awesome design</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon">
-                                            <img src="{{asset('images/users/avatar-2.jpg')}}" class="img-fluid rounded-circle" alt="" />
-                                        </div>
-                                        <p class="notify-details">Cristina Pride</p>
-                                        <p class="text-muted mb-0 user-msg">
-                                            <small>Hi, How are you? What about our next meeting</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom active">
-                                        <div class="notify-icon bg-success"><i class="uil uil-comment-message"></i> </div>
-                                        <p class="notify-details">Jaclyn Brunswick commented on Dashboard<small class="text-muted">1
-                                                min
-                                                ago</small></p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon bg-danger"><i class="uil uil-comment-message"></i></div>
-                                        <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">4 days
-                                                ago</small></p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon bg-primary">
-                                            <i class="uil uil-heart"></i>
-                                        </div>
-                                        <p class="notify-details">Carlos Crouch liked
-                                            <b>Admin</b>
-                                            <small class="text-muted">13 days ago</small>
-                                        </p>
-                                    </a>
-                                </div>
-
-                                <!-- All-->
-                                <a href="javascript:void(0);"
-                                    class="dropdown-item text-center text-primary notify-item notify-all border-top">
-                                    View all
-                                    <i class="fi-arrow-right"></i>
-                                </a>
-
-                            </div>
-                        </li>
-
-                        {{-- <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title="Settings">
-                            <a href="javascript:void(0);" class="nav-link right-bar-toggle">
-                                <i data-feather="settings"></i>
-                            </a>
-                        </li> --}}
-
-                        <li class="dropdown notification-list align-self-center profile-dropdown">
-                            <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="false" aria-expanded="false">
-                                <div class="media user-profile ">
-                                    <img src="{{asset('images/users/avatar-7.jpg')}}" alt="user-image" class="rounded-circle align-self-center" />
-                                    <div class="media-body text-left">
-                                        <h6 class="pro-user-name ml-2 my-0">
-                                            <span>Shreyu N</span>
-                                            <span class="pro-user-desc text-muted d-block mt-1">Administrator </span>
-                                        </h6>
-                                    </div>
-                                    <span data-feather="chevron-down" class="ml-2 align-self-center"></span>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu profile-dropdown-items dropdown-menu-right">
-                                <a href="pages-profile.html" class="dropdown-item notify-item">
-                                    <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
-                                    <span>My Account</span>
-                                </a>
-
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i data-feather="settings" class="icon-dual icon-xs mr-2"></i>
-                                    <span>Settings</span>
-                                </a>
-
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
-                                    <span>Support</span>
-                                </a>
-
-                                <a href="pages-lock-screen.html" class="dropdown-item notify-item">
-                                    <i data-feather="lock" class="icon-dual icon-xs mr-2"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-
-                                <div class="dropdown-divider"></div>
-
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <!-- end Topbar -->
-
-            @include('layouts.sidebar')
-
-            <!-- ============================================================== -->
-            <!-- Start Page Content here -->
-            <!-- ============================================================== -->
-
-            <div class="content-page">
-                <div class="content">
-                    @yield('content')
-                </div> <!-- content -->
-
-                
-
-                <!-- Footer Start -->
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                2020 &copy; MedanDev. All Rights Reserved.
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- end Footer -->
-
-            </div>
-
-            <!-- ============================================================== -->
-            <!-- End Page content -->
-            <!-- ============================================================== -->
-
-
+<section id="container" class="">
+    <!--header start-->
+    <header class="header white-bg">
+        <div class="sidebar-toggle-box">
+            <i class="fa fa-bars"></i>
         </div>
-        <!-- END wrapper -->
+        <!--logo start-->
+        <a href="{{url("dashboard")}}" class="logo" >
+            <img alt="avatar" src="{{asset('images/logo.jpg')}}" class="txt- center" height="50px"><span>Bawaslu</span></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+          <!--  notification start -->
+          <ul class="nav top-menu">
+            <!-- settings start -->
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="fa fa-tasks"></i>
+                    <span class="badge bg-success">6</span>
+                </a>
+                <ul class="dropdown-menu extended tasks-bar">
+                    <div class="notify-arrow notify-arrow-green"></div>
+                    <li>
+                        <p class="green">You have 6 pending tasks</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="task-info">
+                                <div class="desc">Dashboard v1.3</div>
+                                <div class="percent">40%</div>
+                            </div>
+                            <div class="progress progress-striped">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <span class="sr-only">40% Complete (success)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="task-info">
+                                <div class="desc">Database Update</div>
+                                <div class="percent">60%</div>
+                            </div>
+                            <div class="progress progress-striped">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <span class="sr-only">60% Complete (warning)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="task-info">
+                                <div class="desc">Iphone Development</div>
+                                <div class="percent">87%</div>
+                            </div>
+                            <div class="progress progress-striped">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 87%">
+                                    <span class="sr-only">87% Complete</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="task-info">
+                                <div class="desc">Mobile App</div>
+                                <div class="percent">33%</div>
+                            </div>
+                            <div class="progress progress-striped">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
+                                    <span class="sr-only">33% Complete (danger)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="task-info">
+                                <div class="desc">Dashboard v1.3</div>
+                                <div class="percent">45%</div>
+                            </div>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                    <span class="sr-only">45% Complete</span>
+                                </div>
+                            </div>
 
-        {{-- @include('layouts.rightbar') --}}
+                        </a>
+                    </li>
+                    <li class="external">
+                        <a href="#">See All Tasks</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- settings end -->
+            <!-- inbox dropdown start-->
+            <li id="header_inbox_bar" class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-important">5</span>
+                </a>
+                <ul class="dropdown-menu extended inbox">
+                    <div class="notify-arrow notify-arrow-red"></div>
+                    <li>
+                        <p class="red">You have 5 new messages</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="photo"><img alt="avatar" src="{{asset('template/img/avatar-mini.jpg')}}"></span>
+                                  <span class="subject">
+                                  <span class="from">Jonathan Smith</span>
+                                  <span class="time">Just now</span>
+                                  </span>
+                                  <span class="message">
+                                      Hello, this is an example msg.
+                                  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="photo"><img alt="avatar" src="{{asset('template/img/avatar-mini2.jpg')}}"></span>
+                                  <span class="subject">
+                                  <span class="from">Jhon Doe</span>
+                                  <span class="time">10 mins</span>
+                                  </span>
+                                  <span class="message">
+                                   Hi, Jhon Doe Bhai how are you ?
+                                  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="photo"><img alt="avatar" src="{{asset('template/img/avatar-mini3.jpg')}}"></span>
+                                  <span class="subject">
+                                  <span class="from">Jason Stathum</span>
+                                  <span class="time">3 hrs</span>
+                                  </span>
+                                  <span class="message">
+                                      This is awesome dashboard.
+                                  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="photo"><img alt="avatar" src="{{asset('template/img/avatar-mini4.jpg')}}"></span>
+                                  <span class="subject">
+                                  <span class="from">Jondi Rose</span>
+                                  <span class="time">Just now</span>
+                                  </span>
+                                  <span class="message">
+                                      Hello, this is metrolab
+                                  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">See all messages</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- inbox dropdown end -->
+            <!-- notification dropdown start-->
+            <li id="header_notification_bar" class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
-        <!-- Right bar overlay-->
-        {{-- <div class="rightbar-overlay"></div> --}}
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge bg-warning">7</span>
+                </a>
+                <ul class="dropdown-menu extended notification">
+                    <div class="notify-arrow notify-arrow-yellow"></div>
+                    <li>
+                        <p class="yellow">You have 7 new notifications</p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                            Server #3 overloaded.
+                            <span class="small italic">34 mins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                            Server #10 not respoding.
+                            <span class="small italic">1 Hours</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                            Database overloaded 24%.
+                            <span class="small italic">4 hrs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="label label-success"><i class="fa fa-plus"></i></span>
+                            New user registered.
+                            <span class="small italic">Just now</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="label label-info"><i class="fa fa-bullhorn"></i></span>
+                            Application error.
+                            <span class="small italic">10 mins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">See all notifications</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- notification dropdown end -->
+        </ul>
+        </div>
+        <div class="top-nav ">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder="Search">
+                </li>
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="{{asset('template/img/avatar1_small.jpg')}}">
+                        <span class="username">{{Auth::user()->email}}</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <div class="log-arrow-up"></div>
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
+                    <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
 
-        <!-- Vendor js -->
-        <script src="{{asset('js/vendor.min.js')}}"></script>
-
-        <!-- App js -->
-        <script src="{{asset('js/app.min.js')}}"></script>
-        
+                <!-- user login dropdown end -->
+                <li class="sb-toggle-right">
+                    <i class="fa  fa-align-right"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    {{-- content --}}
+        @include('layouts.content')
+            @yield('content')
+        @include('layouts.footer')
     </body>
 </html>
